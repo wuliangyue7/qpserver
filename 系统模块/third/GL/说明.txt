@@ -1,0 +1,6 @@
+FreeGlut
+FREEGLUT_LIB_PRAGMAS  1:使用头文件的 #pragma comment(lib: "")  0:不使用
+FREEGLUT_STATIC  freeglut_static.lib
+
+
+GLEW_STATIC glew32_static.lib
