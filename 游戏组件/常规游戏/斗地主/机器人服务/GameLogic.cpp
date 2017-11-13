@@ -927,7 +927,8 @@ bool CGameLogic::SearchOutCard(const BYTE cbHandCardData[], BYTE cbHandCardCount
 
       //炸弹判断
       BYTE cbTempLogicValue=GetCardLogicValue(cbCardData[cbCardCount-i-1]);
-      for(BYTE j=1; j<4; j++)
+	  BYTE j = 0;
+      for(j=1; j<4; j++)
       {
         if(GetCardLogicValue(cbCardData[cbCardCount+j-i-1])!=cbTempLogicValue)
         {
@@ -3069,10 +3070,10 @@ BYTE CGameLogic::AnalyseSinleCardCount(BYTE const cbHandCardData[], BYTE const c
 
   //指针数组
   pGetAllCardFun GetAllCardFunArray[4] ;
-  GetAllCardFunArray[0] = GetAllBomCard ;   //炸弹函数
-  GetAllCardFunArray[1] = GetAllLineCard ;  //顺子函数
-  GetAllCardFunArray[2] = GetAllThreeCard ; //三条函数
-  GetAllCardFunArray[3] = GetAllDoubleCard ;  //对子函数
+  GetAllCardFunArray[0] = &CGameLogic::GetAllBomCard ;   //炸弹函数
+  GetAllCardFunArray[1] = &CGameLogic::GetAllLineCard;  //顺子函数
+  GetAllCardFunArray[2] = &CGameLogic::GetAllThreeCard; //三条函数
+  GetAllCardFunArray[3] = &CGameLogic::GetAllDoubleCard;  //对子函数
 
   //指针数组下标
   BYTE cbIndexArray[4] = {0,1,2,3} ;

@@ -1287,6 +1287,7 @@ BYTE CGameLogic::SearchLineCardType(const BYTE cbHandCardData[], BYTE cbHandCard
 
   //ËÑË÷Ë³×Ó
   BYTE cbTmpLinkCount = 0;
+  BYTE cbValueIndex = 0;
   for(BYTE cbValueIndex=cbReferIndex; cbValueIndex<13; cbValueIndex++)
   {
     //¼ÌÐøÅÐ¶Ï

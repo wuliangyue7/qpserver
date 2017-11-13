@@ -6094,7 +6094,7 @@ VOID CAttemperEngineSink::SendMobileKindInfo(DWORD dwSocketID, WORD wModuleID)
     }
 
     //拷贝数据
-    if(pGameKindItem->m_GameKind.wKindID==wModuleID)
+	//if (pGameKindItem->m_GameKind.wKindID == wModuleID)
     {
       CopyMemory(cbDataBuffer+wSendSize,&pGameKindItem->m_GameKind,sizeof(tagGameKind));
       wSendSize+=sizeof(tagGameKind);
@@ -6143,7 +6143,7 @@ VOID CAttemperEngineSink::SendMobileServerInfo(DWORD dwSocketID, WORD wModuleID)
     }
 
     //拷贝数据
-    if(pGameServerItem->m_GameServer.wKindID==wModuleID)
+	//if (pGameServerItem->m_GameServer.wKindID == wModuleID)
     {
       CopyMemory(cbDataBuffer+wSendSize,&pGameServerItem->m_GameServer,sizeof(tagGameServer));
       wSendSize+=sizeof(tagGameServer);
